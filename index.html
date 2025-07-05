@@ -4,47 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="site-title">Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/vanilla-colorful@0.6.2/hex-color-picker.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- (The rest of the body is the same, only the header's logo div is changed) -->
-    <div id="cursor-dot"></div>
+    <div id="preloader"> <div class="preloader-content"> <h1 class="preloader-name">しらたま</h1> </div> </div>
     <div id="cursor-glow"></div>
     <canvas id="bg-canvas"></canvas>
 
     <header>
-        <div class="logo">
-            <img id="header-icon" alt="icon">
-            <a href="#" id="header-name"></a>
-        </div>
-        <div class="nav-container">
-            <nav>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#works">Works</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <button id="theme-toggle" title="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
+        <div class="logo"> <img id="header-icon" alt="icon"> <a href="#" id="header-name"></a> </div>
+        <nav class="navbar"> <a href="#about">About</a> <a href="#skills">Skills</a> <a href="#works">Works</a> <a href="#contact">Contact</a> </nav>
+        <div class="header-right">
+            <button id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+            <button id="settings-toggle" title="Open settings"><i class="fas fa-cog"></i></button>
+            <button id="menu-toggle" class="menu-toggle-btn"> <span></span> <span></span> <span></span> </button>
         </div>
     </header>
     
-    <!-- (main and footer sections are unchanged) -->
     <main>
-        <section id="hero"> <div class="hero-content"> <h1 id="hero-title"></h1> <p id="hero-subtitle" class="subtitle"></p> <a href="#about" class="scroll-down-btn"> <i class="fas fa-arrow-down"></i> </a> </div> </section>
+        <section id="hero"> <div class="hero-content"> <h1 id="hero-title"></h1> <p id="hero-subtitle" class="subtitle"></p> <a href="#about" class="scroll-down-btn" aria-label="Scroll to about section"> <i class="fas fa-arrow-down"></i> </a> </div> </section>
         <section id="about" class="content-section"> <h2 id="about-title" class="section-title"></h2> <p id="about-description"></p> </section>
         <section id="skills" class="content-section"> <h2 id="skills-title" class="section-title"></h2> <div id="skills-list" class="skills-container"></div> </section>
         <section id="works" class="content-section"> <h2 id="works-title" class="section-title"></h2> <div id="works-list" class="works-container"></div> </section>
-        <section id="contact" class="content-section"> <h2 id="contact-title" class="section-title"></h2> <p>お気軽にご連絡ください。下のメールアドレスか、SNSからどうぞ。</p> <div class="email-container"> <a id="contact-email" href="#" class="email-link"></a> <button id="copy-email-btn" title="Copy email address"> <i class="far fa-copy"></i> </button> <span id="copy-success-msg">Copied!</span> </div> <div id="social-links" class="social-links"></div> </section>
+        <section id="contact" class="content-section"> <h2 id="contact-title" class="section-title"></h2> <p>お気軽にご連絡ください。下のメールアドレスか、SNSからどうぞ。</p> <div class="email-container"> <a id="contact-email" href="#"></a> <button id="copy-email-btn" title="Copy email address"> <i class="far fa-copy"></i> </button> <span id="copy-success-msg">Copied!</span> </div> <div id="social-links" class="social-links"></div> </section>
     </main>
-    <footer> <p>© 2024 <span id="footer-name"></span>. All Rights Reserved.</p> </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <footer class="footer"> <p>© 2024 <span id="footer-name"></span>. All Rights Reserved.</p> </footer>
+
+    <!-- Settings Panel -->
+    <div id="settings-panel">
+        <div class="settings-header"> <h2>Settings</h2> <button id="close-settings-btn" title="Close settings">×</button> </div>
+        <div class="settings-content">
+            <div class="setting-item"> <label>Background Color 1</label> <hex-color-picker id="color1-picker"></hex-color-picker> </div>
+            <div class="setting-item"> <label>Background Color 2</label> <hex-color-picker id="color2-picker"></hex-color-picker> </div>
+            <div class="setting-item"> <label>Particle Count (<span id="particle-count-value">5000</span>)</label> <div id="particle-count-slider" class="custom-slider"></div> </div>
+            <div class="setting-item"> <label>Emit Rate (<span id="emit-rate-value">1000</span>)</label> <div id="emit-rate-slider" class="custom-slider"></div> </div>
+        </div>
+        <div class="settings-footer">
+            <button id="reset-settings-btn">Reset to Default</button>
+        </div>
+    </div>
+
+    <!-- Libraries -->
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+    
+    <!-- Main Script -->
     <script src="script.js"></script>
 </body>
 </html>
