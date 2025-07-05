@@ -3,54 +3,12 @@
   "myIcon": "myicon.png",
   "jobTitle": "Student Developer & Tech Enthusiast",
   "backgroundScene": {
-    "starCount": 8000,
-    "light": {
-      "color": "#FFFFFF",
-      "intensity": 1.2
-    },
-    "objects": [
-      {
-        "shape": "Torus",
-        "size": 0.5,
-        "distance": 12,
-        "speed": 0.0005,
-        "style": {
-          "type": "dual",
-          "color": "#1A1A2E",
-          "wireframeColor": "#00FF88"
-        }
-      },
-      {
-        "shape": "Icosahedron",
-        "size": 0.3,
-        "distance": 8,
-        "speed": 0.0008,
-        "style": {
-          "type": "solid",
-          "color": "#FF6B6B"
-        }
-      },
-      {
-        "shape": "Sphere",
-        "size": 0.15,
-        "distance": 6,
-        "speed": 0.0012,
-        "style": {
-          "type": "wireframe",
-          "wireframeColor": "#4ECDC4"
-        }
-      },
-      {
-        "shape": "Box",
-        "size": 0.25,
-        "distance": 15,
-        "speed": 0.0004,
-        "style": {
-          "type": "wireframe",
-          "wireframeColor": "#45B7D1"
-        }
-      }
-    ]
+    "color1": "#8A2BE2",
+    "color2": "#4ECDC4",
+    "lightThemeColor1": "#6a5acd",
+    "lightThemeColor2": "#20b2aa",
+    "particleCount": 5000,
+    "emitRate": 1000
   },
   "hero": {
     "title": "Learning by Building.",
@@ -61,20 +19,22 @@
     "description": "中学生でありながら、プログラミングに情熱を注いでいます。HTML、CSS、JavaScriptから始まり、React、TypeScript、Next.jsなど最新の技術を学び続けています。将来は技術を使って人々の生活をより良くするサービスを作りたいと考えています。学業と両立しながら、日々新しい技術に触れ、小さなプロジェクトを通じて実践的なスキルを身につけています。"
   },
   "skills": {
-    "title": "学習中の技術スタック",
+    "title": "Skills",
     "items": [
-      { "name": "HTML & CSS", "icon": "fab fa-html5" },
-      { "name": "JavaScript", "icon": "fab fa-js-square" },
-      { "name": "React", "icon": "fab fa-react" },
-      { "name": "TypeScript", "icon": "fas fa-code" },
-      { "name": "Next.js", "icon": "fas fa-arrow-right" },
-      { "name": "Node.js", "icon": "fab fa-node-js" },
-      { "name": "C# / C++", "icon": "fas fa-terminal" },
-      { "name": "Git & GitHub", "icon": "fab fa-git-alt" }
+      { "name": "HTML5", "icon": "devicon-html5-plain colored" },
+      { "name": "CSS3", "icon": "devicon-css3-plain colored" },
+      { "name": "JavaScript", "icon": "devicon-javascript-plain colored" },
+      { "name": "React", "icon": "devicon-react-original colored" },
+      { "name": "TypeScript", "icon": "devicon-typescript-plain colored" },
+      { "name": "Next.js", "icon": "devicon-nextjs-original-wordmark colored" },
+      { "name": "Node.js", "icon": "devicon-nodejs-plain colored" },
+      { "name": "C#", "icon": "devicon-csharp-plain colored" },
+      { "name": "Git", "icon": "devicon-git-plain colored" },
+      { "name": "Babylon.js", "icon": "devicon-babylonjs-plain colored" }
     ]
   },
   "works": {
-    "title": "学習プロジェクト",
+    "title": "Works",
     "items": [
       {
         "title": "Weather App",
@@ -88,34 +48,34 @@
       },
       {
         "title": "Game Collection",
-        "description": "C#とJavaScriptで作った小さなゲーム集。アルゴリズムの学習に役立ちました。",
+        "description": "C#とJavaScriptで作った小さなゲーム集",
         "url": "#"
       },
       {
         "title": "Portfolio Site",
-        "description": "このサイト自体も学習の成果です。Three.jsを使った3D表現にチャレンジしました。",
+        "description": "このサイト自体も学習の成果です。Babylon.jsを使った3D表現にチャレンジしました。",
         "url": "#"
       }
     ]
   },
   "contact": {
-    "title": "一緒に学びませんか？",
-    "email": "your.email@example.com",
+    "title": "Contact",
+    "email": "anlihongshu@gmail.com",
     "social": [
       {
         "name": "GitHub",
-        "url": "https://github.com/yourusername",
-        "icon": "fab fa-github"
+        "url": "https://github.com/shiratama644",
+        "icon": "fa-brands fa-github"
       },
       {
         "name": "X (Twitter)",
-        "url": "https://twitter.com/yourusername",
-        "icon": "fab fa-twitter"
+        "url": "https://x.com",
+        "icon": "fa-brands fa-twitter"
       },
       {
         "name": "Discord",
-        "url": "#",
-        "icon": "fab fa-discord"
+        "url": "https://discord.gg/AXVDqSXc",
+        "icon": "fa-brands fa-discord"
       }
     ]
   }
