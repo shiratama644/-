@@ -37,21 +37,19 @@
     "title": "Works",
     "items": [
       {
+        "id": "weather-app",
         "title": "Weather App",
         "description": "React + TypeScriptで作成した天気予報アプリ。APIの使い方を学びました。",
         "url": "#"
       },
       {
+        "id": "todo-manager",
         "title": "Todo Manager",
         "description": "Next.jsを使用したタスク管理アプリ。データベース連携も実装しています。",
         "url": "#"
       },
       {
-        "title": "Game Collection",
-        "description": "C#とJavaScriptで作った小さなゲーム集",
-        "url": "#"
-      },
-      {
+        "id": "portfolio-site",
         "title": "Portfolio Site",
         "description": "このサイト自体も学習の成果です。Babylon.jsを使った3D表現にチャレンジしました。",
         "url": "#"
@@ -62,21 +60,9 @@
     "title": "Contact",
     "email": "anlihongshu@gmail.com",
     "social": [
-      {
-        "name": "GitHub",
-        "url": "https://github.com/shiratama644",
-        "icon": "fa-brands fa-github"
-      },
-      {
-        "name": "X (Twitter)",
-        "url": "https://x.com",
-        "icon": "fa-brands fa-twitter"
-      },
-      {
-        "name": "Discord",
-        "url": "https://discord.gg/AXVDqSXc",
-        "icon": "fa-brands fa-discord"
-      }
+      { "name": "GitHub", "url": "https://github.com/shiratama644", "icon": "fa-brands fa-github" },
+      { "name": "X (Twitter)", "url": "https://x.com", "icon": "fa-brands fa-twitter" },
+      { "name": "Discord", "url": "https://discord.gg/AXVDqSXc", "icon": "fa-brands fa-discord" }
     ]
   }
 }
