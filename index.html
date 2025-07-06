@@ -40,7 +40,6 @@
 
     <footer class="footer"> <p>© 2024 <span id="footer-name"></span>. All Rights Reserved.</p> </footer>
 
-    <!-- Settings Panel -->
     <div id="settings-panel">
         <div class="settings-header"> <h2>Settings</h2> <button id="close-settings-btn" title="Close settings">×</button> </div>
         <div class="settings-content">
@@ -49,8 +48,24 @@
             <div class="setting-item"> <label>Particle Count (<span id="particle-count-value">5000</span>)</label> <div id="particle-count-slider" class="custom-slider"></div> </div>
             <div class="setting-item"> <label>Emit Rate (<span id="emit-rate-value">1000</span>)</label> <div id="emit-rate-slider" class="custom-slider"></div> </div>
         </div>
-        <div class="settings-footer">
-            <button id="reset-settings-btn">Reset to Default</button>
+        <div class="settings-footer"> <button id="reset-settings-btn">Reset to Default</button> </div>
+    </div>
+
+    <!-- Works Modal -->
+    <div id="modal-overlay">
+        <div id="modal-window">
+            <button id="modal-close-btn" title="Close details">×</button>
+            <div class="modal-image-container">
+                <img id="modal-image" src="" alt="Project Image">
+            </div>
+            <div class="modal-content">
+                <h3 id="modal-title"></h3>
+                <div id="modal-tags" class="modal-tags-container"></div>
+                <p id="modal-description"></p>
+                <a id="modal-link" href="#" class="work-link" target="_blank" rel="noopener noreferrer">
+                    View Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
     </div>
 
