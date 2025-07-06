@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const [mainResponse, projectsResponse] = await Promise.all([
                 fetch('setting.json'),
-                fetch('projectsetting.json')
+                fetch('projects.json')
             ]);
 
             const [mainData, projectsData] = await Promise.all([
